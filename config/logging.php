@@ -65,6 +65,27 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'rateLimiter' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/rateLimiter.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'replace_placeholders' => true,
+        ],
+
+        'log-error' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/errors.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'replace_placeholders' => true,
+        ],
+
+        'log-queues' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/errors.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'replace_placeholders' => true,
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
